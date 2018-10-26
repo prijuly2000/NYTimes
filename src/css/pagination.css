@@ -1,0 +1,13 @@
+.pagination {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+.page {
+    padding: 25px;
+    outline: none;
+}
+
+.pageSelected {
+    background-color: teal;
+}
