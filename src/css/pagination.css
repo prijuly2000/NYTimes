@@ -1,15 +1,16 @@
+/* BEM style */
 .pagination {
     margin: 50px;
     display: flex;
     justify-content: center;
 }
-.page {
+.pagination .page {
     padding: 25px;
     outline: none;
     font-size: 30px;
 }
 
-.pageSelected {
+.pagination .page--selected {
     background-color: teal;
     color: white;
 }

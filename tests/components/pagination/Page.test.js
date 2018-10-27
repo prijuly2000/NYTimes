@@ -1,6 +1,6 @@
 import React from "react";
 import {mount} from "enzyme";
-import Page from "../../src/components/pagination/Page";
+import Page from "../../../src/components/pagination/Page"
 import sinon from "sinon";
 
 describe("Page Tests", () => {

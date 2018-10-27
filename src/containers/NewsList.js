@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import NewsList from "../components/NewsList";
+import NewsList from "../components/news/NewsList";
 import {openModal} from "../actions/ActionCreators";
 
 const mapStateToProps = (state) => {

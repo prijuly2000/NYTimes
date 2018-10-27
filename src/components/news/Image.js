@@ -27,7 +27,9 @@ class Image extends React.Component {
     }
 
     render() {
-        return (<img alt="Image not found" src={`${HOST}${this.state.currentSrc}`} className={this.props.className} />);
+        return (<div className={this.props.className}>
+            <img alt="Image not found" className="newsItem__image" src={`${HOST}${this.state.currentSrc}`} />
+        </div>);
     }
 }
 

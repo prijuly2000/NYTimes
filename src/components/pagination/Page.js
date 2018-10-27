@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Adding Page to improve ease of dev and maintenance.
+/**
+ * Page - displays each pagination item.
+ */
 export default class Page extends React.Component { 
     constructor(props) {
         super(props);
@@ -15,7 +17,7 @@ export default class Page extends React.Component {
 
     render() {
         const {index, isSelected} = this.props;
-        return (<button key={index} className={`page ${isSelected && "pageSelected"}`} onClick={this.handleClick}>
+        return (<button key={index} className={`page ${isSelected && "page--selected"}`} onClick={this.handleClick}>
             {index}
         </button>);
     }

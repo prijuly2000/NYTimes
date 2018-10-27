@@ -1,8 +1,8 @@
 import React from "react";
 import {mount} from "enzyme";
-import Pagination from "../../src/components/pagination/Pagination";
+import Pagination from "../../../src/components/pagination/Pagination";
 import sinon from "sinon";
-import {apiStatus}  from "../../src/utils/Enums"
+import {apiStatus}  from "../../../src/utils/Enums"
 
 describe("Pagination Tests", () => {
     it("should mount", () => {

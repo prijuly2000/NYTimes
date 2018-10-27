@@ -1,0 +1,101 @@
+/* BEM style */
+body {
+    font-family: sans-serif;
+}
+.newsItem {
+    transition: transform .2s;
+    position: relative;
+    background: tomato;
+    padding: 5px;
+    width: 400px;
+    border-radius: 5px;
+    height: 450px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    min-width: 300px;
+    cursor: pointer;
+}
+
+.newsItem__image {
+    height: 100%;
+    width: 100%;
+}
+
+.newsItem .newsReadMore {
+    display: none;
+    font-size: 25px;
+    color: blue;
+    right: 5;
+}
+
+.newsItem:hover:not(.newsItem--modal) .newsReadMore,
+/* adctive should be after hover. Hover is not supported in mobile browsers. */
+.newsItem:active:not(.newsItem--modal) .newsReadMore{
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    font-family: sans-serif;
+}
+
+.newsItem.newsItem--modal {
+    width: 600px;
+    height: 500px;
+}
+
+.newsItem:hover:not(.newsItem--modal) {
+    transform: scale(1.1);
+}
+
+.newsItem .newsHeading {
+    z-index: 2;
+    font-size: 30px;
+}
+
+.newsItem .newsNoImg {
+    height: 96%;
+}
+
+.newsItem .newsHeading:after {
+    content: "";
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.newsItem .newsInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsItem .newsDate {
+    text-align: left;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.newsLoading {
+    display: flex;
+    justify-content: center;
+}
+
+.newsItem .newsItem__imageBox {
+    animation-name: fadeInOut;
+    display: flex;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    width: 100%;
+    height: 88%;
+    z-index: 1;
+}

@@ -4,6 +4,10 @@ import "../../css/pagination.css";
 import {apiStatus} from "../../utils/Enums";
 import Page from "./Page";
 
+/**
+ * Pagination - displays Page list.
+ * Respossible to naviation between pages and triggering API call for page selection.
+ */
 class Pagination extends React.Component {
     constructor(props) {
         super(props);

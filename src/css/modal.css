@@ -1,9 +1,10 @@
+/* BEM style */
 .newsModalScreen {
     position: fixed;
     top: 0;
     left: 0;
     background-color: black;
-    opacity: 0.4;
+    opacity: 0.7;
     height: 100%;
     width: 100%;
 }
@@ -15,7 +16,7 @@
     transform: translate(-50%, -50%);
 }
 
-.newsModalClose {
+.newsModal .newsModal__closeButton {
     position: absolute;
     top: 20;
     right: 20px;

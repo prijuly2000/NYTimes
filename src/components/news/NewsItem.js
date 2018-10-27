@@ -1,8 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {formatDate} from "../utils/Utils";
+import { formatDate } from "../../utils/Utils";
 import Image from "./Image";
+import "../../css/newsItem.css";
 
+/**
+ * NewsItem - displays news in card format.
+ */
 class NewsItem extends React.Component {
     constructor(props) {
         super(props);
@@ -16,7 +20,7 @@ class NewsItem extends React.Component {
     render() {
         const {item, isModal} = this.props;
         const isMediaPresent = item.multimedia.length;
-        return (<div className={`newsItem ${isModal && "newsItemModal"}`} onClick={this.handleNewsClick}>
+        return (<div className={`newsItem ${isModal ? "newsItem--modal" : ""}`} onClick={this.handleNewsClick}>
             <div className="newsScroll">
                 {
                     isMediaPresent ? <marquee behavior="scroll" direction="left" className="newsHeading">
@@ -28,8 +32,9 @@ class NewsItem extends React.Component {
             </div>
             {
                 isMediaPresent ? 
-                    <Image className="newsImage" srcList={item.multimedia.map(mm => mm.url)}/> : null
+                    <Image className="newsItem__imageBox" srcList={item.multimedia.map(mm => mm.url)}/> : null
             }
+            <a className="newsReadMore" onClick={this.handleNewsClick}>Read more...</a>
             <div className="newsInfo">
                 <div className="newsDate">{item.pub_date && formatDate(new Date(item.pub_date))}</div>
                 <div>{item.source}</div>
@@ -46,7 +51,8 @@ NewsItem.propTypes = {
 };
 
 NewsItem.defaultItem = {
-    isModal: false
+    isModal: false,
+    onClick: () => {}
 };
 
 export default NewsItem;
