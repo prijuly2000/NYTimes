@@ -6,8 +6,10 @@
 .page {
     padding: 25px;
     outline: none;
+    font-size: 30px;
 }
 
 .pageSelected {
     background-color: teal;
+    color: white;
 }

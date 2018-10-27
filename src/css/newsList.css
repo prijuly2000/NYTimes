@@ -29,7 +29,12 @@
     cursor: pointer;
 }
 
-.newsItem:hover {
+.newsItemModal {
+    width: 600px;
+    height: 500px;
+}
+
+.newsItem:hover:not(.newsItemModal) {
     transform: scale(1.1);
 }
 

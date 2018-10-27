@@ -1,15 +1,15 @@
 /***  examples/src/index.js ***/
 import React from "react";
 import { render } from "react-dom";
-import NewsList from "./containers/NewsList";
-import Pagination from "./containers/Pagination";
+import createSagaMiddleware from "redux-saga";
 import { Provider } from "react-redux"
 import { createStore, applyMiddleware } from "redux";
 import reducers from "./reducers";
 import {initNews} from "./actions/ActionCreators"
 import rootSaga from "./sagas/defaultIndex";
-import createSagaMiddleware from "redux-saga";
-
+import NewsList from "./containers/NewsList";
+import Pagination from "./containers/Pagination";
+import Modal from "./containers/Modal";
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(reducers, applyMiddleware(sagaMiddleware));
@@ -21,6 +21,7 @@ const App = () => (
     <div>
         <NewsList />
         <Pagination />
+        <Modal />
     </div>
 );
 render(<Provider store={store}><App /></Provider>, document.getElementById("root"));

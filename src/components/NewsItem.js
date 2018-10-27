@@ -14,9 +14,9 @@ class NewsItem extends React.Component {
     }
 
     render() {
-        const item = this.props.item;
+        const {item, isModal} = this.props;
         const isMediaPresent = item.multimedia.length;
-        return (<div className="newsItem" onClick={this.handleNewsClick}>
+        return (<div className={`newsItem ${isModal && "newsItemModal"}`} onClick={this.handleNewsClick}>
             <div className="newsScroll">
                 {
                     isMediaPresent ? <marquee behavior="scroll" direction="left" className="newsHeading">
@@ -41,7 +41,12 @@ class NewsItem extends React.Component {
 NewsItem.propTypes = {
     item: PropTypes.object,
     onClick: PropTypes.func,
-    index: PropTypes.number
+    index: PropTypes.number,
+    isModal: PropTypes.bool
+};
+
+NewsItem.defaultItem = {
+    isModal: false
 };
 
 export default NewsItem;
