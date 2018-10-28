@@ -39,9 +39,9 @@ class Modal extends React.Component {
     render() {
         // Enable/disable scrolling on main page when modal is closed/open.
         if (this.props.selectedItem) {
-            document.body.style.overflow = "-webkit-paged-y";
+            document.body.style.overflow = "hidden";
         } else {
-            document.body.style.overflow = "-webkit-paged-y"
+            document.body.style.overflow = "scroll"
         }
         return (<div>
             {/* Blank screen covering the whole screen. Modal closes when clicked on it. */}

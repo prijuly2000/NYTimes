@@ -10,6 +10,7 @@ import rootSaga from "./sagas/defaultIndex";
 import NewsList from "./containers/NewsList";
 import Pagination from "./containers/Pagination";
 import Modal from "./containers/Modal";
+import "./css/index.css";
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(reducers, applyMiddleware(sagaMiddleware));
@@ -18,7 +19,7 @@ sagaMiddleware.run(rootSaga)
 store.dispatch(initNews(0));
 
 const App = () => (
-    <div>
+    <div style={{height: "fit-content"}}>
         <NewsList />
         <Pagination />
         <Modal />

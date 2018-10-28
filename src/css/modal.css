@@ -5,6 +5,7 @@
     left: 0;
     background-color: black;
     opacity: 0.7;
+    z-index: 10;
     height: 100%;
     width: 100%;
 }
@@ -12,12 +13,16 @@
 .newsModal {
     position: fixed;
     top: 50%;
+    z-index: 10;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .newsModal .newsModal__closeButton {
     position: absolute;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: white;
     top: 20;
     right: 20px;
     z-index: 10;

@@ -17,9 +17,9 @@ export default class Page extends React.Component {
 
     render() {
         const {index, isSelected} = this.props;
-        return (<button key={index} className={`page ${isSelected && "page--selected"}`} onClick={this.handleClick}>
+        return (<div><button key={index} className={`page ${isSelected && "page--selected"}`} onClick={this.handleClick}>
             {index}
-        </button>);
+        </button></div>);
     }
 };
 

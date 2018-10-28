@@ -1,12 +1,17 @@
 /* BEM style */
 .pagination {
-    margin: 50px;
+    /*margin: 50px;*/
+    margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .pagination .page {
     padding: 25px;
+    cursor: pointer;
+    background-color: white;
     outline: none;
+    border: 1px solid grey;
     font-size: 30px;
 }
 

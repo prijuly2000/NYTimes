@@ -1,7 +1,4 @@
 /* BEM style */
-body {
-    font-family: sans-serif;
-}
 .newsItem {
     transition: transform .2s;
     position: relative;
@@ -43,7 +40,8 @@ body {
 }
 
 .newsItem.newsItem--modal {
-    width: 600px;
+    width: auto;
+    max-width: 600px;
     height: 500px;
 }
 
