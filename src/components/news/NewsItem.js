@@ -32,7 +32,7 @@ class NewsItem extends React.Component {
             </div>
             {
                 isMediaPresent ? 
-                    <Image className="newsItem__imageBox" srcList={item.multimedia.map(mm => mm.url)}/> : null
+                    <Image srcList={item.multimedia.map(mm => mm.url)}/> : null
             }
             <a className="newsReadMore" onClick={this.handleNewsClick}>Read more...</a>
             <div className="newsInfo">

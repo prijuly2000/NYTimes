@@ -30,6 +30,7 @@ class Modal extends React.Component {
     }
 
     getModalBody() {
+        // Loop through list of news to create array of react components.
         return (<div className="newsModal">
              <button className="newsModal__closeButton" onClick={this.props.onClose}>X</button>
             <NewsItem item={this.props.selectedItem} isModal={true}/>

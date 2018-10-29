@@ -7,10 +7,12 @@ class Image extends React.Component {
     constructor(props) {
         super(props);
         this.state = {currentSrc: props.srcList[0], currentSrcIndex: 0};
+        // Max number of images that are related to the news.
         this.max = props.srcList.length;
     }
 
     componentDidMount () {
+        // Change image every 2 seconds
         this.interval = setInterval((function() {
             let newSrcIndex = this.state.currentSrcIndex + 1;
             newSrcIndex > this.max && (newSrcIndex = 0);
@@ -27,7 +29,8 @@ class Image extends React.Component {
     }
 
     render() {
-        return (<div className={this.props.className}>
+        // Wrap image in div to prevent inconsistent image size.
+        return (<div className="newsItem__imageBox">
             <img alt="Image not found" className="newsItem__image" src={`${HOST}${this.state.currentSrc}`} />
         </div>);
     }

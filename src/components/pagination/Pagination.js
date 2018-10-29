@@ -21,6 +21,8 @@ class Pagination extends React.Component {
     generateBody() {
         const pages = [];
         const currentPage = this.props.currentPage;
+        // If current selected page is less than 5 then display from page 0 to 9.
+        // If greater then from currentPage - 5. This will be useful for navigation among pages.
         const start = currentPage < 5 ? 0 : currentPage - 5 ;
         for(let i = start; i < start + 10; i++) {
             pages.push(<Page 

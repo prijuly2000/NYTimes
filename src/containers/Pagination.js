@@ -4,7 +4,8 @@ import {initNews} from "../actions/ActionCreators";
 
 const mapStateToProps = (state) => {
     return {
-        currentPage: +state.newsInfo.currentPage, // + to convert string to number.
+        // + to convert string to number.
+        currentPage: +state.newsInfo.currentPage, 
         status: state.newsInfo.status
     };
 }
